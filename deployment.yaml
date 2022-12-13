@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: dep-1
+   labels:
+     app: deployment
+spec:
+   replicas: 4
+   selector:
+
+    matchLabels:
+      pod: hello
+   template:
+     metadata:
+      labels:
+        pod: hello
+     spec:
+      containers:
+      - name: cnt-1
+        image: gcr.io/clouddeploy/hello
+        ports:
+        - containerPort: 8080
