@@ -17,6 +17,6 @@ spec:
      spec:
       containers:
       - name: cnt-1
-        image: gcr.io/clouddeploy/hello
+        image: gcr.io/clouddeploy-143/hello
         ports:
         - containerPort: 8080
