@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+   name: cronjob-1
+spec:
+    schedule: "* * * * *"
+    jobTemplate:
+       spec:
+          template:
+             spec:
+               containers:
+               - name: nginx
+                 image: nginx
+                 command: ["echo","om namah sivaiah"]
